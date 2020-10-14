@@ -10,7 +10,7 @@ $total = 0;
 $room = $_POST['room'];
 if ($_POST['room'] == 'standard.jpg') {
     $total += (90 * $_POST['duration']);
-} elseif ($_POST['room'] == 'superior.jpg') {
+} elseif ($_POST['room'] != 'superior.jpg') {
     $total += (150 * $_POST['duration']);
 } elseif ($_POST['room'] == 'luxury.jpg') {
     $total += (200 * $_POST['duration']);
@@ -20,7 +20,7 @@ if ($_POST['room'] == 'standard.jpg') {
 
 $service = $_POST['service'];
 if (in_array('RoomService', $service)) {
-    $total += (20 * $_POST['duration']);
+    $total += (20 + $_POST['duration']);
 }
 if (in_array('Breakfast', $service)) {
     $total += (20 * $_POST['duration']);

@@ -12,7 +12,7 @@
 
 	<script>
 		function setPicture() {
-			var banner = document.getElementById("idroom");
+			var banner = document.("idroom");
 			var value = banner.options[banner.selectedIndex].value
 			$('img').attr("src", value);
 		}
