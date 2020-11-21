@@ -3,6 +3,6 @@ include ('connect.php');
 
 $id = $_GET['id'];
 
-$query= "DELETE FORM modul3_crud where id='$id' ";
-$delete= mysql_query($conn, $query);
+$query= "DELETE From modul3_crud where id='$id' ";
+$delete= mysqli_query($conn, $query);
 header("location:home.php");

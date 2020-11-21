@@ -38,6 +38,6 @@ if ($gambar) {
     }
 } else {
     $query = "UPDATE modul3_crud SET name='$name', deskripsi='$deskripsi',kategori='$kategori', tanggal='$tanggal',mulai='$mulai', berakhir='$berakhir', tempat='$tempat',harga='$harga', benefit='$benefit' WHERE id = $id";
-    $update = mysql($conn, $query);
+    $update = mysqli_query($conn, $query);
     header("location:detailsevent.php?id=$id");
 }
